@@ -5,32 +5,28 @@
     "children": []
   },
   {
-    "key": "About Us",
+    "key": "Benefits of Misting",
+    "url": "/benefits-of-misting/",
+    "children": []
+  },
+  {
+    "key": "Product Overview",
+    "url": "/product-overview/",
+    "children": [ ]
+  },
+  {
+    "key": "Installation",
+    "url": "/installation/",
+    "children": []
+  },
+  {
+    "key": "About",
     "url": "/about/",
-    "children": []
+    "children": []     
   },
   {
-    "key": "Projects",
-    "url": "/projects/",
-    "children": [
-      {
-        "key": "Project 1",
-        "url": "/projects/project-1/"
-      },
-      {
-        "key": "Project 2",
-        "url": "/projects/project-2/"
-      }
-    ]
-  },
-  {
-    "key": "Reviews",
-    "url": "/reviews/",
-    "children": []
-  },
-  {
-    "key": "Blog",
-    "url": "/blog/",
+    "key": "Contact",
+    "url": "/contact/",
     "children": []     
   }
 ]

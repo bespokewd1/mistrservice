@@ -2,11 +2,18 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import CTA from "@components/CTA.astro";
 import FAQ from "@components/FAQ.astro";
+import { ImageSlider } from '@components/React/Slider';
+import { Picture } from 'astro:assets';
+
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
 import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
+import slideImg1 from '@assets/images/Mistr Service Flyer.png';
+import slideImg2 from '@assets/images/hero.jpg';
 const optimizedImage = await getImage({src: landingImage, format: 'avif'})
+
+const heroImages = [ slideImg2, slideImg1];
 ---
 
 <BaseLayout
@@ -17,8 +24,35 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
   <!-- ============================================ -->
   <!--                    Hero                      -->
   <!-- ============================================ -->
-
   <section id="hero">
+    <div class="cs-container">
+      <div class="cs-flex-group">
+        <span class="cs-topper">High Pressure Misting System</span>
+        <h1 class="cs-title">Smarter Way to Stay Cool</h1>
+        <a href="/about" class="cs-button-solid">Call Now</a>
+        <a href="/contact" class="cs-button-transparent">
+          <img
+            class="cs-img"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+            alt="play icon"
+            width="17"
+            height="17"
+          />
+          Learn More
+        
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Image -->
+    <!-- We can't use Astro <Picture /> as it does not support multiple sources -->
+   
+    <ImageSlider imgDatas={heroImages} isAutoSlide client:visible />
+   
+  </section>
+  <!--<section id="hero">
     <div class="cs-container">
       <div class="cs-flex-group">
         <span class="cs-topper">Mist’r Service</span>
@@ -43,8 +77,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
       </div>
     </div>
 
-    <!-- Background Image -->
-    <!-- We can't use Astro <Picture /> as it does not support multiple sources -->
+    
     <picture class="cs-picture">
       <source
         media="(max-width: 600px)"
@@ -62,7 +95,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
       />
     </picture>
 
-  </section>
+  </section>-->
 
   <!-- ============================================ -->
   <!--                  Services                    -->
@@ -80,7 +113,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           height="48"
         />
       </picture>
-      <h2>Service 1</h2>
+      <h2>Cool Zone</h2>
       <p>
         Talk about the service with keywords people will be searching for it by.
         Keep it 1-2 sentences.
@@ -97,7 +130,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           height="48"
         />
       </picture>
-      <h2>Service 2</h2>
+      <h2>Safe and Deterrent</h2>
       <p>
         Talk about the service with keywords people will be searching for it by.
         Keep it 1-2 sentences.
@@ -114,7 +147,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           height="48"
         />
       </picture>
-      <h2>Service 3</h2>
+      <h2>Safe and Deterrent</h2>
       <p>
         Talk about the service with keywords people will be searching for it by.
         Keep it 1-2 sentences.
@@ -782,7 +815,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
   /* Desktop Parallax Effect - 1300px */
   @media only screen and (min-width: 81.25em) {
     #hero {
-      background: url("/assets/images/hero.jpg");
+      /*background: url("/assets/images/hero.jpg");*/
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -811,15 +844,15 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
   /* Mobile */
   @media only screen and (min-width: 0em) {
     .services {
-      width: 90%;
+      width: 100%;
       max-width: (1320/16em);
       margin: auto;
-      margin-top: (-167/16em);
+      /*margin-top: (-167/16em);*/
       margin-bottom: (50/16em);
       padding: (50/16em) (20/16em);
       background: #fff;
       box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-      border-top: (6/16em) solid var(--primary);
+      /*border-top: (6/16em) solid var(--primary);*/
       border-radius: (5/16em);
       position: relative;
       z-index: 100;

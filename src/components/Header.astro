@@ -2,6 +2,7 @@
 import navData from "@data/navData.json";
 import { Icon } from 'astro-icon/components';
 import DarkModeToggle from "@components/DarkModeToggle.astro";
+
 ---
 
 <!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
@@ -10,7 +11,7 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
     <!--Nav Logo-->
     <a href="/" class="cs-logo" aria-label="back to home">
       <img
-        src="/assets/svgs/logo-black.svg"
+        src="/assets/svgs/Mist'R Service Logo.jpg"
         alt=""
         width="210"
         height="29"
@@ -93,6 +94,26 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
   </div>
 </header>
 
+<script>
+// This script adds a class to the body after scrolling 100px
+// and we used these body.scroll styles to create some on scroll 
+// animations with the navbar
+
+document.addEventListener('scroll', (e) => { 
+    const scroll = document.documentElement.scrollTop;
+    if(scroll >= 100){
+   (document.querySelector('body') as Element).classList.add('scroll')
+    } else {
+      (document.querySelector('body') as Element).classList.remove('scroll')
+    }
+});
+
+
+function querySelector(arg0: string): Element {
+throw new Error("Function not implemented.");
+}
+</script>
+
 <style lang="less">
 
 /*-- -------------------------- -->
@@ -100,7 +121,9 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
 <--- -------------------------- -*/
 
 /* Mobile - 1023px */
-@media only screen and (max-width: 63.9375rem) {
+@media only screen and (max-width: 63.9375rem)
+
+{
   body {
     &.cs-open {
       overflow: hidden;
@@ -114,7 +137,7 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     padding: (12/16rem) (16/16rem);
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
