@@ -296,11 +296,12 @@ const heroImages = [ slideImg2, slideImg1];
     </div>
   </section>
 <!-- ============================================ -->
-  <!--                  Service                  -->
+  <!--                  Product                -->
   <!-- ============================================ -->
-
-  <section id="services" class="services">
+ 
+  <section id="product" class="product">
     <h2 class="cs-header">Announcement</h2>
+    <div class="productBox">
     <article class="card">
       <Picture
         src={slideImg2}
@@ -309,7 +310,8 @@ const heroImages = [ slideImg2, slideImg1];
         pictureAttributes={{ class: 'cs-picture' }}
       />
 
-      <h3>Licensed & Insured</h3>
+    <div class="insideText"><h3>Lorem Ipsum</h3>
+    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p></div> 
     </article>
 
     <article class="card">
@@ -319,8 +321,9 @@ const heroImages = [ slideImg2, slideImg1];
         formats={['avif', 'webp']}
         pictureAttributes={{ class: 'cs-picture' }}
       />
-      <h3>Direct Billing Available</h3>
-    </article>
+      <div class="insideText"><h3>Lorem Ipsum</h3>
+        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p></div> 
+        </article>
 
     <article class="card">
       <Picture
@@ -329,10 +332,14 @@ const heroImages = [ slideImg2, slideImg1];
         formats={['avif', 'webp']}
         pictureAttributes={{ class: 'cs-picture' }}
       />
-      <h3>Check our Promotions</h3>
-    </article>
+      <div class="insideText"><h3>Lorem Ipsum</h3>
+        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p></div> 
+        </article>
+      </div>
   </section>
 
+ 
+  
   <!-- ============================================ -->
   <!--                   Gallery                    -->
   <!-- ============================================ -->
@@ -881,7 +888,46 @@ const heroImages = [ slideImg2, slideImg1];
 <--- -------------------------- -*/
 
   /* Mobile */
+  @media only screen and (min-width: 768px) {
+    .services {
+      font-size: ~'min(1.8vw, 1em)';
+      width: 98%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .cs-header {
+        top: 0.5rem;
+      }
+
+      .card {
+        max-width: (325/16em);
+        margin: 0;
+        grid-template-rows: min-content;
+
+        overflow: hidden;
+        picture,
+        h3 {
+          transition: transform 300ms ease;
+        }
+
+        &:hover {
+          picture {
+            transform: scale(1.1);
+          }
+
+          h3 {
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  /* Large Desktop */
+  /* Mobile */
   @media only screen and (min-width: 0em) {
+     
     .services {
       width: 100%;
       max-width: (1320/16em);
@@ -983,6 +1029,157 @@ const heroImages = [ slideImg2, slideImg1];
       }
     }
   }
+
+  /*-- -------------------------- -->
+<---          Product         -->
+<--- -------------------------- -*/
+
+  /* Mobile */
+   @media only screen and (min-width: 0em) {
+    
+    .product{
+      font-size: ~'min(1.8vw, 1em)';
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+     
+      .cs-header {
+        top: 0.5rem;
+        
+      }
+      .productBox{
+        display: flex;
+       gap: 1rem;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding: 15px;
+      }
+      .card {
+        //*max-width: (325/16em);*//
+        margin: 0;
+        grid-template-rows: min-content;
+        width: 100%;
+        overflow: hidden;
+        
+        border: solid 1px rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        padding: 10px;
+        picture,
+        h3 {
+          transition: transform 300ms ease;
+          font-size: 1.5rem;
+          text-align: center;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        p {
+          transition: transform 300ms ease;
+          text-align: center;
+        }
+        &:hover {
+          picture {
+            transform: scale(1.1);
+             
+          }
+
+         
+          .insideText{
+         transform: scale(1.05);
+         background-color: rgba(0, 0, 0, 0.3);
+         z-index: 100;
+         opacity: 1;
+         color: #fff !important;
+         h3{
+          transform: translateY(0);
+         }
+         p{
+          transform: translateY(0);
+         }
+        }
+        }
+      }
+    }
+  }
+
+  /* Large Desktop */
+  @media only screen and (min-width: 768px) {
+    .product {
+      padding: 5rem (80/16em) (50/16em);
+      margin-left:auto;
+      margin-right: auto;
+      max-width: 80rem;
+      width: 100%;
+      .cs-header {
+        top: 0;
+        font-size: 2rem;
+      }
+      .productBox{
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .card {  
+        max-width: (357/16em);
+        display:grid;
+        place-content: center;
+        border: none;
+        overflow: hidden;
+        
+        & > * {
+grid-area: 1/1;
+ width:100%;
+}       
+.insideText{
+         place-self: center;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 200ms ease-in;       
+          h3{
+            color: #fff;
+            transform: translateY(-300px);
+          }
+          p{
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+            transform: translateY(300px);
+          }
+          
+        
+        }
+       
+      }
+    }
+  }
+
+  /* Dark mode */
+  @media only screen and (min-width: 0em) {
+    body.dark-mode {
+      #product {
+        background: var(--medium);
+
+        picture {
+          background: var(--primaryDark);
+        }
+
+        h3 {
+          font-weight: 500;
+          // color: #fff;
+          //background-color: var(--medium);
+        }
+      }
+    }
+  }
+
 
   /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
