@@ -163,7 +163,7 @@ const heroImages = [ slideImg2, slideImg1];
     <div class="cs-container">
       <!-- Left Image Section -->
       <div class="cs-left">
-        <picture class="cs-picture cs-picture1">
+       <!--<picture class="cs-picture cs-picture1">
           <source
             media="(max-width: 600px)"
             srcset="/assets/images/cabinets2-m.jpg"
@@ -200,7 +200,8 @@ const heroImages = [ slideImg2, slideImg1];
             width="400"
             height="563"
           />
-        </picture>
+        </picture>-->
+        <video poster="https://s9d72bkvj3.ufs.sh/f/B6ztFARGHN28toxUp42ElK92uaJV7ZsPAwFy6IgDchfWYzkO" controls="controls" width="100%"> <source src="https://s9d72bkvj3.ufs.sh/f/B6ztFARGHN28tNKSJK2ElK92uaJV7ZsPAwFy6IgDchfWYzkO"></video>
       </div>
       <!-- Right Content Section-->
       <div class="cs-right">
@@ -233,6 +234,7 @@ const heroImages = [ slideImg2, slideImg1];
     </div>
   </section>
 
+  
   <!-- ============================================ -->
   <!--            Extra Content To Rank             -->
   <!-- ============================================ -->
@@ -292,6 +294,43 @@ const heroImages = [ slideImg2, slideImg1];
         </p>
       </div>
     </div>
+  </section>
+<!-- ============================================ -->
+  <!--                  Service                  -->
+  <!-- ============================================ -->
+
+  <section id="services" class="services">
+    <h2 class="cs-header">Announcement</h2>
+    <article class="card">
+      <Picture
+        src={slideImg2}
+        alt="service 1"
+        formats={['avif', 'webp']}
+        pictureAttributes={{ class: 'cs-picture' }}
+      />
+
+      <h3>Licensed & Insured</h3>
+    </article>
+
+    <article class="card">
+      <Picture
+        src={slideImg2}
+        alt="service 2"
+        formats={['avif', 'webp']}
+        pictureAttributes={{ class: 'cs-picture' }}
+      />
+      <h3>Direct Billing Available</h3>
+    </article>
+
+    <article class="card">
+      <Picture
+        src={slideImg2}
+        alt="service 3"
+        formats={['avif', 'webp']}
+        pictureAttributes={{ class: 'cs-picture' }}
+      />
+      <h3>Check our Promotions</h3>
+    </article>
   </section>
 
   <!-- ============================================ -->
