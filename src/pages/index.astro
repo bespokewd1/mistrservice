@@ -12,10 +12,11 @@ import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASS
 import { getImage } from "astro:assets";
 import slideImg1 from '@assets/images/Mistr Service Flyer.png';
 import slideImg2 from '@assets/images/hero.jpg';
+import slideImg3 from '@assets/images/Mistr Service Flyer.png';
 import Compatibility from "@components/compatibility.astro";
 const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 
-const heroImages = [ slideImg2, slideImg1];
+const heroImages = [ slideImg2, slideImg1, slideImg3];
 
 ---
 
@@ -346,7 +347,46 @@ const heroImages = [ slideImg2, slideImg1];
 
   <Compatibility />
   <Features />
+   <!-- ============================================ -->
+  <!--                 Side By Side                 -->
+  <!-- ============================================ -->
   
+  <section id="sbs">
+    <div class="cs-container">
+      <!-- Left Image Section -->
+      <div class="cs-left">
+        <picture class="cs-picture cs-picture1">
+          <img
+              aria-hidden="true"
+              decoding="async"
+              src="/assets/images/unitag_qrcode_standard.png"
+              alt="new hallway"
+              loading="lazy"
+              width="400"
+              height="560"
+            />
+          
+         
+        </picture>
+       
+      </div>
+      <!-- Right Content Section-->
+      <div class="cs-right">
+        <span class="cs-topper">Product Overview</span>
+        <h2 class="cs-title">Scan QR to see promo</h2>
+        <p class="cs-text">
+            We thought it was time that misting systems caught up to the smarts of today's technology so we've created an app that gives you the control of modulating, scheduling, and automating your misting systems all from your phone.
+        </p>
+        <p class="cs-text">
+            <b>Modulate</b> and control how cool your space gets. Without modulation excess water is constantly pumped into your space that can't be evaporated. This will result in sharp rise in relative humidity, reduced comfort, fogged air, and fine water mist dropping onto surfaces and people without evaporating but making them wet instead.
+        </p>
+        <p class="cs-text">
+            <b>Wirelessly</b> control up to four different misting systems independently of each other with advanced features and operating modes such as fine resolution misting modulation, non stop misting, and full 7 day 4 intervals per each day scheduling. Cool patio, outdoor kitchen, dog's yard, and add a bit of fog effects to your pool at night.
+        </p>
+        <a href="#sbs" class="cs-button-solid">Product Overview</a>
+      </div>
+    </div>
+  </section>
   
   <!-- ============================================ -->
   <!--                   Gallery                    -->
@@ -679,7 +719,7 @@ const heroImages = [ slideImg2, slideImg1];
           content: "";
           width: 100%;
           height: 100%;
-          background: #000;
+          background:#000;
           opacity: 0.7;
           display: block;
           position: absolute;
@@ -1604,7 +1644,7 @@ grid-area: 1/1;
       }
     }
   }
-
+  
   /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/

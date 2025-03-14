@@ -126,7 +126,10 @@ throw new Error("Function not implemented.");
 {
   body.scroll{
 #cs-navigation{
-background-color: #fff
+background-color: #fff;
+li.cs-li-link{
+  color: #1a1a1a !important;
+}
 }
 
 }
@@ -517,6 +520,15 @@ background-color: #fff
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+  body.scroll{
+#cs-navigation{
+background-color: #fff;
+.cs-li-link{
+  color: #1a1a1a !important;
+}
+}
+}
+
   #cs-navigation {
     .cs-dropdown {
       position: relative;
@@ -534,6 +546,7 @@ background-color: #fff
           transform: translateY(0);
         }
       }
+      
     }
 
     .cs-dropdown:has(.cs-drop-icon) {
@@ -631,6 +644,7 @@ background-color: #fff
     }
 
     .cs-li-link {
+      color:#f7f7f7 !important;
       &.cs-drop-link {
         font-size: (16/16rem);
         line-height: 1.5em;

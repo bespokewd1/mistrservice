@@ -14,17 +14,18 @@ export interface Props {
 const { items, title, url , isReverse } = Astro.props;
 ---
 
-<div class="w-full max-w-6xl space-y-2">
-<div class="relative border border-[#e5e9eb]  bg-[#f3f4f6] px-6 pb-4 pt-8 max-w-[80rem]  [mask:linear-gradient(90deg,transparent,white_5%,white_95%,transparent)]">
-    <h3
-      class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-[#fbad18] px-4 py-1 uppercase tracking-tight text-xs"
-    >
-      {title}
-    </h3>
+<div class="w-full max-w-6xl space-y-2 relative grid  row-gap-2 overflow-x-clip overflow-y-visible ">
+ <h3
+    class="z-100 w-fit rounded-full border border-current bg-[#fbad18] px-4 py-1 uppercase tracking-tight text-xs self-end absolute -top-3 right-3 "
+  >
+    {title}
+  </h3>
+<div class="relative border border-[#e5e9eb]  bg-[#f3f4f6] px-6 pb-4 pt-8 max-w-[80rem]  ">
+    
     <ul class="flex items-center justify-around px-0  gap-8  scroller-inner w-fit " style={isReverse ? 'animation-direction: reverse' : ''}>
       {
         [...items,...items].map((item) => (
-          <li >
+          <li class="text-[#353535]!" >
             <a class="flex flex-col items-center gap-2 group w-[200px]" href={item.url}>
                 <Picture src={slideImg2}
         alt="service 1" class="group-hover:grayscale-0 grayscale"
@@ -32,7 +33,7 @@ const { items, title, url , isReverse } = Astro.props;
         pictureAttributes={{ class: 'cs-picture' }}
         
       />
-              <span class="group-hover:text-[#6366f1]">{item.title}</span>
+              <span class="group-hover:text-[#6366f1] ">{item.title}</span>
             </a>
           </li>
         ))
