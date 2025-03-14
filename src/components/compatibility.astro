@@ -1,0 +1,91 @@
+---
+import CompatibilityList from "@components/compatibility-list.astro";
+import ContentSection from "./ContentSection.astro";
+import type { CompatibilityItem } from "@lib/types.ts";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "Logos1",
+    icon: "frameworks/react",
+    url: "/home",
+  },
+  {
+    title: "Logos1",
+    icon: "frameworks/preact",
+    url: "/home",
+  },
+  {
+    title: "Logos1",
+    icon: "frameworks/svelte",
+    url: "/home",
+  },
+  {
+    title: "Logos1",
+    icon: "frameworks/vue",
+    url: "/home",
+  },
+  {
+    title: "Logos1",
+    icon: "frameworks/solid",
+    url: "/home",
+  },
+  {
+    title: "Logos1",
+    icon: "frameworks/lit",
+    url: "/home",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "TrustSymbol1",
+    icon: "platforms/netlify",
+    url: "/home",
+  },
+  {
+    title: "TrustSymbol2",
+    icon: "platforms/vercel",
+    url: "/home",
+  },
+  {
+    title: "TrustSymbol3",
+    icon: "fa-brands:cloudflare",
+    url: "/home",
+  },
+  {
+    title: "TrustSymbol4",
+    icon: "platforms/render",
+    url: "/home",
+  },
+  {
+    title: "TrustSymbol5",
+    icon: "fa-brands:github",
+    url: "/home",
+  },
+  {
+    title: "TrustSymbol6",
+    icon: "fa-brands:gitlab",
+    url: "/home",
+  },
+];
+---
+
+<ContentSection title="Logos & Trust Symbols" id="compatibility">
+  <Fragment slot="lead">
+    Astro <span class="text-(--primary)">plays nice</span>. Bring your own UI{" "}
+    <span class="text-(--primary)">framework</span>
+    and deploy to your favorite <span class="text-(--primary)">platform</span>.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Logos"
+    url="/home"
+    isReverse= {true}
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Trust Symbols"
+    url="/home"
+    isReverse= {false}
+  />
+</ContentSection>

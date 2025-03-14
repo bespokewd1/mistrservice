@@ -1,0 +1,76 @@
+---
+import ContentSection from "./ContentSection.astro";
+import type { FeatureItem } from "@lib/types.ts";
+import slideImg2 from '@assets/images/hero.jpg';
+import { Picture } from 'astro:assets';
+
+
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Features 1",
+    description:
+      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+    icon:"mdi:handshake",
+  },
+  {
+    title: "Features 2",
+    description:
+      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Features 3",
+    description:
+      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Features 4",
+    description:
+      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Features 5",
+    description:
+      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Features 6",
+    description:
+      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+    icon: "mdi:handshake",
+  },
+];
+
+---
+
+<ContentSection title="Features" id="features">
+    <Fragment slot="lead">
+      Astro comes <span class="text-(--primary)">batteries included</span>. It takes
+      the best parts of
+      <span class="text-(--primary)">state-of-the-art</span>
+      tools and adds its own <span class="text-(--primary)">innovations</span>.
+    </Fragment>
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {
+        features.map(({ title, description, icon }) => (
+          <li class="flex flex-col items-center gap-4 border border-gray-900/20  bg-[#e5e7eb] p-6 ">
+            <div class="size-full px-3 py-3 hover:scale-110 transition-transform duration-300 ">
+              <Picture src={slideImg2}
+        alt="service 1"
+        formats={['avif', 'webp']}
+        pictureAttributes={{ class: 'cs-picture' }}
+        
+      />
+            </div>
+            <p class="text-center font-extrabold text-xl ">{title}</p>
+            <p class="text-center text-offset text-sm ">{description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </ContentSection>
+  

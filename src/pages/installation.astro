@@ -7,15 +7,12 @@ import FAQ from "@components/FAQ.astro";
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
 import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
-import { ImageSlider } from "@components/React/Slider";
-import { Picture } from 'astro:assets';
-import slideImg1 from '@assets/images/Mistr Service Flyer.png';
-import slideImg2 from '@assets/images/hero.jpg';
+
 const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 ---
 
 <BaseLayout
-  title="Benefits of Misting"
+  title="Product Overview"
   description="Meta description for the page"
   preloadedImage = {optimizedImage}
 >
@@ -24,7 +21,7 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
   <!-- ============================================ -->
 
   <Landing 
-    title="Benefits of Misting"
+    title="Installation"
     image={optimizedImage}
   />
 
@@ -77,24 +74,18 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
       </div>
       <!-- Right Content Section-->
       <div class="cs-right">
-        <span class="cs-topper">Benefits of Misting</span>
-        <h2 class="cs-title">Mist like an Egyptian.</h2>
+        <span class="cs-topper">Product Overview</span>
+        <h2 class="cs-title">Other misting systems are still in the stone age.</h2>
         <p class="cs-text">
-            Though our bodies are built with natural cooling systems (sweat) many outdoor climates require a bit more cooling than your body can provide. Texas summer anyone?.
+            We thought it was time that misting systems caught up to the smarts of today's technology so we've created an app that gives you the control of modulating, scheduling, and automating your misting systems all from your phone.
         </p>
         <p class="cs-text">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
+            <b>Modulate</b> and control how cool your space gets. Without modulation excess water is constantly pumped into your space that can't be evaporated. This will result in sharp rise in relative humidity, reduced comfort, fogged air, and fine water mist dropping onto surfaces and people without evaporating but making them wet instead.
         </p>
-        <div class="cs-flex-group">
-          <p class="cs-flex-p">
-            As early as 2500 B.C., ancient Egyptians placed porous water pots, pools, ponds, and thin water chutes to cool their spaces with evaporated water. Science has come a long way since then, but the basic principles remain. Hot air cools with water.
-          </p>
-         
-        </div>
-        <a href="/product-overview" class="cs-button-solid">Our Projects</a>
+        <p class="cs-text">
+            <b>Wirelessly</b> control up to four different misting systems independently of each other with advanced features and operating modes such as fine resolution misting modulation, non stop misting, and full 7 day 4 intervals per each day scheduling. Cool patio, outdoor kitchen, dog's yard, and add a bit of fog effects to your pool at night.
+        </p>
+        <a href="#sbs" class="cs-button-solid">Product Overview</a>
       </div>
     </div>
   </section>
@@ -144,10 +135,10 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
       </div>
       <!-- Right Content Section-->
       <div class="cs-right">
-        <span class="cs-topper">Benefits of Misting</span>
-        <h2 class="cs-title">Not all misting systems are alike.</h2>
+        <span class="cs-topper">Product Overview</span>
+        <h2 class="cs-title">aerMist Misting Cooling System Overview</h2>
         <p class="cs-text">
-            Unlike other misters on the market, aerMist solutions provide comfort rather than a soaking. No one wants drenched shirts and cushions during a dinner party.
+            A high pressure misting system consists of a water feed line, water feed line filtering, high pressure misting pump, high pressure supply line, misting line(s), and fittings. Misting line can be built with either stainless steel or high pressure plastic tubing.
         </p>
         <p class="cs-text">
           <strong>Low pressure misting systems</strong><br />

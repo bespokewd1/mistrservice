@@ -1,0 +1,58 @@
+---
+import { Picture } from 'astro:assets';
+import type { CompatibilityItem } from "@lib/types.ts";
+import slideImg2 from '@assets/images/hero.jpg';
+
+
+export interface Props {
+  items: Array<CompatibilityItem>;
+  title: string;
+  url: string;
+  isReverse?: boolean;
+}
+
+const { items, title, url , isReverse } = Astro.props;
+---
+
+<div class="w-full max-w-6xl space-y-2">
+<div class="relative border border-[#e5e9eb]  bg-[#f3f4f6] px-6 pb-4 pt-8 max-w-[80rem]  [mask:linear-gradient(90deg,transparent,white_5%,white_95%,transparent)]">
+    <h3
+      class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-[#fbad18] px-4 py-1 uppercase tracking-tight text-xs"
+    >
+      {title}
+    </h3>
+    <ul class="flex items-center justify-around px-0  gap-8  scroller-inner w-fit " style={isReverse ? 'animation-direction: reverse' : ''}>
+      {
+        [...items,...items].map((item) => (
+          <li >
+            <a class="flex flex-col items-center gap-2 group w-[200px]" href={item.url}>
+                <Picture src={slideImg2}
+        alt="service 1" class="group-hover:grayscale-0 grayscale"
+        formats={['avif', 'webp']}
+        pictureAttributes={{ class: 'cs-picture' }}
+        
+      />
+              <span class="group-hover:text-[#6366f1]">{item.title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <!-- <p class="text-right text-sm">
+    <a class="text-primary" href={url}> ...and more &rarr;</a>
+  </p>-->
+</div>
+
+<style>
+    @keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 32px / 2));
+  }
+}
+
+
+.scroller-inner {
+    animation: scroll var(--animation-duration, 20s) forwards linear infinite ;
+}
+</style>

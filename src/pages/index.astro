@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Features from "@components/Features.astro";
 import CTA from "@components/CTA.astro";
 import FAQ from "@components/FAQ.astro";
 import { ImageSlider } from '@components/React/Slider';
@@ -11,10 +12,13 @@ import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASS
 import { getImage } from "astro:assets";
 import slideImg1 from '@assets/images/Mistr Service Flyer.png';
 import slideImg2 from '@assets/images/hero.jpg';
+import Compatibility from "@components/compatibility.astro";
 const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 
 const heroImages = [ slideImg2, slideImg1];
+
 ---
+
 
 <BaseLayout
   title="Pixel Perfect Websites"
@@ -239,10 +243,10 @@ const heroImages = [ slideImg2, slideImg1];
   <!--            Extra Content To Rank             -->
   <!-- ============================================ -->
 
-  <section id="sbs-r">
-    <div class="cs-container">
+  <!-- <section id="sbs-r">-->
+    <!-- <div class="cs-container">-->
       <!-- Left Image Section -->
-      <div class="cs-left">
+      <!--<div class="cs-left">
         <picture class="cs-picture cs-picture1">
           <source
             media="(max-width: 600px)"
@@ -281,9 +285,9 @@ const heroImages = [ slideImg2, slideImg1];
             height="560"
           />
         </picture>
-      </div>
+      </div>-->
       <!-- Right Content Section-->
-      <div class="cs-right">
+      <!-- <div class="cs-right">
         <span class="cs-topper">Mist'r Service</span>
         <h2 class="cs-title">High-Quality Misting Systems for Residential & Commercial Cooling</h2>
         <p class="cs-text">
@@ -294,13 +298,14 @@ const heroImages = [ slideImg2, slideImg1];
         </p>
       </div>
     </div>
-  </section>
+  </section>-->
+  
 <!-- ============================================ -->
   <!--                  Product                -->
   <!-- ============================================ -->
  
   <section id="product" class="product">
-    <h2 class="cs-header">Announcement</h2>
+    <h2 class=" bg-gradient-to-t from-[#82C0FB] to-(--textBg) bg-clip-text backdrop-blur-xl text-transparent text-center font-extrabold tracking-tight text-6xl">Products</h2>
     <div class="productBox">
     <article class="card">
       <Picture
@@ -308,6 +313,7 @@ const heroImages = [ slideImg2, slideImg1];
         alt="service 1"
         formats={['avif', 'webp']}
         pictureAttributes={{ class: 'cs-picture' }}
+        
       />
 
     <div class="insideText"><h3>Lorem Ipsum</h3>
@@ -338,7 +344,9 @@ const heroImages = [ slideImg2, slideImg1];
       </div>
   </section>
 
- 
+  <Compatibility />
+  <Features />
+  
   
   <!-- ============================================ -->
   <!--                   Gallery                    -->
@@ -1035,6 +1043,7 @@ const heroImages = [ slideImg2, slideImg1];
 <--- -------------------------- -*/
 
   /* Mobile */
+   /* Mobile */
    @media only screen and (min-width: 0em) {
     
     .product{
@@ -1044,7 +1053,16 @@ const heroImages = [ slideImg2, slideImg1];
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-     
+      margin: 2 auto 3.125em;
+        padding: 5rem 1.25em 3.125em;
+        background: #fff;
+        box-shadow: 0 20px 40px #0000000d;
+        border-top: .375em solid #00b6c9;
+        border-radius: .3125em;
+        position: relative;
+        z-index: 100;
+        gap: .5rem;
+
       .cs-header {
         top: 0.5rem;
         
@@ -1180,6 +1198,7 @@ grid-area: 1/1;
     }
   }
 
+   
 
   /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
@@ -1627,6 +1646,7 @@ grid-area: 1/1;
         justify-content: center;
         align-items: flex-start;
         gap: (30/16em);
+        
       }
 
       .cs-row {
@@ -1647,6 +1667,7 @@ grid-area: 1/1;
           position: absolute;
           top: 0;
           left: 0;
+      
         }
       }
 
