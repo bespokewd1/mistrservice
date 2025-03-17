@@ -117,7 +117,7 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
   <!--                  Services                    -->
   <!-- ============================================ -->
 
-  <section id="services" style="text-align: center;">
+  <section id="services">
     <div class="container">
       <h2 class="cs-title">Our Services</h2>
       <p class="cs-text">
@@ -858,6 +858,8 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
   @media only screen and (min-width: 0em) {
     #services{
       text-align: center;
+      padding: var(--sectionPadding);
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
       .services {
         width: 100%;
         max-width: (1320/16em);
@@ -918,9 +920,6 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
     /* Desktop */
     @media only screen and (min-width: 1024px) {
     #services{
-      text-align: center;
-      padding: var(--sectionPadding);
-      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
       .services {
         font-size: ~'min(1.8vw, 1em)';
         width: 98%;
