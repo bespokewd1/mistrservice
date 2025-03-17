@@ -960,7 +960,8 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
 
   /* Inbetween */
   @media only screen and (min-width: 768px) {
-    .services {
+    #services{
+      .services {
       font-size: ~"min(1.8vw, 1em)";
       width: 98%;
       display: flex;
@@ -972,16 +973,19 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
         margin: 0;
       }
     }
+    }
   }
 
   /* Large Desktop */
   @media only screen and (min-width: 1300px) {
-    .services {
+    #services{
+      .services {
       padding: (50/16em) (80/16em);
 
       .card {
         max-width: (357/16em);
       }
+    }
     }
   }
 
