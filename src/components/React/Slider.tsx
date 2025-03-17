@@ -71,8 +71,8 @@ export function ImageSlider({
           height={img.height}
         />
       ))}
-
-      <div className="absolute bottom-[15%] right-0 left-0 z-[1]">
+      {/* temporarily hide round white indicators for hero background image slider*/}
+      {/* <div className="absolute bottom-[15%] right-0 left-0 z-[1]">
         <div className="flex items-center justify-center gap-4">
           {imgDatas.map((_, i) => (
             <div
@@ -84,7 +84,7 @@ export function ImageSlider({
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
