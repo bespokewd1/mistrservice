@@ -774,35 +774,39 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
 
   /* Mobile */
   @media only screen and (min-width: 768px) {
-    .services {
-      font-size: ~'min(1.8vw, 1em)';
-      width: 98%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      text-align: center;
-      .cs-header {
-        top: 0.5rem;
-      }
-
-      .card {
-        max-width: (325/16em);
-        margin: 0;
-        grid-template-rows: min-content;
-
-        overflow: hidden;
-        picture,
-        h3 {
-          transition: transform 300ms ease;
+    #services{
+      padding: var(--sectionPadding);
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+      .services {
+        font-size: ~'min(1.8vw, 1em)';
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: center;
+        .cs-header {
+          top: 0.5rem;
         }
 
-        &:hover {
-          picture {
-            transform: scale(1.1);
+        .card {
+          max-width: (325/16em);
+          margin: 0;
+          grid-template-rows: min-content;
+
+          overflow: hidden;
+          picture,
+          h3 {
+            transition: transform 300ms ease;
           }
 
-          h3 {
-            transform: translateX(-50%);
+          &:hover {
+            picture {
+              transform: scale(1.1);
+            }
+
+            h3 {
+              transform: translateX(-50%);
+            }
           }
         }
       }
