@@ -6,27 +6,17 @@
   },
   {
     "key": "Benefits of Misting",
-    "url": "/benefits-of-misting/",
+    "url": "/#benefits-of-misting/",
     "children": []
   },
   {
-    "key": "Product Overview",
-    "url": "/product-overview/",
+    "key": "Our Services",
+    "url": "/#services/",
     "children": [ ]
   },
   {
-    "key": "Installation",
-    "url": "/installation/",
+    "key": "About Us",
+    "url": "/#about/",
     "children": []
   },
-  {
-    "key": "About",
-    "url": "/about/",
-    "children": []     
-  },
-  {
-    "key": "Contact",
-    "url": "/contact/",
-    "children": []     
-  }
 ]
