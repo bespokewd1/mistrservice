@@ -41,7 +41,8 @@ export function ImageSlider({
         'before:content-[""] before:w-full before:h-full before:bg-black before:opacity-70 before:absolute before:inset-0 before:z-[1] before:pointer-events-none'
       )}
     >
-      <button
+      {/* temporarily disabled prev and next button */}
+      {/* <button
           onClick={()=>goPrevImage}
           className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
         >
@@ -53,7 +54,7 @@ export function ImageSlider({
         >
           next
 
-        </button>
+        </button> */}
       {imgDatas.map((img, index) => (
         <img
           key={`${img.src}${index}`}
