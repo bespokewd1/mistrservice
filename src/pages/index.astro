@@ -348,7 +348,7 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
         </p>
       </div>
     </div>
-    <p class="cs-text">Rentals available for commercial spaces!</p>
+    <p class="cs-text">	Rentals available for commercial spaces!</p>
   </div>
 </section>
 
@@ -855,7 +855,7 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
 <--- -------------------------- -*/
 
   /* Mobile */
-  @media only screen and (min-width: 0) {
+  @media only screen and (min-width: 768px) {
     #services{
       text-align: center;
       padding: var(--sectionPadding);
@@ -898,7 +898,8 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
   }
 
   /* Large Desktop */
-  @media only screen and (min-width: 64em) {
+  /* Mobile */
+  @media only screen and (min-width: 0em) {
     .services {
       width: 100%;
       max-width: (1320/16em);
@@ -973,15 +974,15 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
   }
 
   /* Large Desktop */
-  // @media only screen and (min-width: 1024px) {
-  //   .services {
-  //     padding: (50/16em) (80/16em);
+  @media only screen and (min-width: 1300px) {
+    .services {
+      padding: (50/16em) (80/16em);
 
-  //     .card {
-  //       max-width: (357/16em);
-  //     }
-  //   }
-  // }
+      .card {
+        max-width: (357/16em);
+      }
+    }
+  }
 
   /* Dark mode */
   @media only screen and (min-width: 0em) {
@@ -1848,7 +1849,7 @@ grid-area: 1/1;
 <--- -------------------------- -*/
 
   /* Mobile */
-  @media only screen and (min-width: 0em) {
+  @media only screen and (min-width: 768px) {
     #benefits{
       text-align: center;
       padding: var(--sectionPadding);
@@ -1891,7 +1892,8 @@ grid-area: 1/1;
   }
 
   /* Large Desktop */
-  @media only screen and (min-width: 64em) {
+  /* Mobile */
+  @media only screen and (min-width: 0em) {
     #benefits {
       width: 100%;
       max-width: (1320/16em);
@@ -1965,5 +1967,15 @@ grid-area: 1/1;
     }
   }
 
+  /* Large Desktop */
+  @media only screen and (min-width: 1300px) {
+    #benefits {
+      padding: (50/16em) (80/16em);
+
+      .card {
+        max-width: (357/16em);
+      }
+    }
+  }
 
 </style>
