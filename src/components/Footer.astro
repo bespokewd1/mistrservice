@@ -18,12 +18,6 @@ const currentYear = getCurrentYear()
           <img src="#" alt="instagram">
         </a>
       </div>
-
-      <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Bespoke Web Design Edmonton</a>
-        <span class="copyright"> © 2024 Mist’r Service. All rights reserved. </span>
-      </div>
     </div>
 
 
@@ -75,6 +69,11 @@ const currentYear = getCurrentYear()
         </ul>
       </div>
     </div>
+    <div class="credit">
+      <span>Designed and Hand Coded by</span>
+      <a href="/" target="_blank" rel="noopener">Bespoke Web Design Edmonton</a>
+      <span class="copyright"> © 2024 Mist’r Service. All rights reserved. </span>
+    </div>
   </div>
 </footer>
 
@@ -114,6 +113,17 @@ const currentYear = getCurrentYear()
         margin: auto;
         color: #fff;
         opacity: 0.9;
+      }
+      .socials{
+        display: flex;
+        gap: 1rem;
+        margin-left: 1.25rem;
+        .social-links{
+          width: 3rem;
+          height: 3rem;
+          background: white;
+          border-radius: 1.5rem;
+        }
       }
     }
 
