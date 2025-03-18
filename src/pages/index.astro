@@ -10,13 +10,13 @@ import { Picture } from 'astro:assets';
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
 import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
-import slideImg1 from '@assets/images/Mistr Service Flyer.png';
+import slideImg1 from '@assets/images/landing.jpg';
 import slideImg2 from '@assets/images/hero.jpg';
-import slideImg3 from '@assets/images/Mistr Service Flyer.png';
+//import slideImg3 from '@assets/images/Mistr Service Flyer.png';
 import Compatibility from "@components/compatibility.astro";
 const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 
-const heroImages = [ slideImg2, slideImg1, slideImg3];
+const heroImages = [ slideImg2, slideImg1];
 
 ---
 
@@ -38,8 +38,7 @@ const heroImages = [ slideImg2, slideImg1, slideImg3];
                 Cool down your patio by up to 20°F without getting wet. Safe and natural insect deterrent. 
                 Enjoy outdoor spaces all Spring and Summer long!
             </h2>
-            <a href="/about" class="cs-button-solid">Get a Free Quote</a>
-            <a href="/contact" class="cs-button-transparent">Contact Us</a>
+            <a href="/contact" class="cs-button-solid">Get a Free Quote</a>
         </div>
     </div>
     <ImageSlider imgDatas={heroImages} isAutoSlide client:visible />
