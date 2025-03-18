@@ -10,25 +10,35 @@ const currentYear = getCurrentYear()
 <footer id="footer">
   <div class="container">
     <div class="left-section">
-      <a class="logo" href="/"
-        ><img
-          loading="lazy"
-          decoding="async"
-          src="/assets/svgs/logo-white.svg"
-          alt="logo"
-          width="264"
-          height="78"
-        /></a
-      >
-      <p>
-        Missouri’s Coolest Misting Solutions for Home & Business
-      </p>
+      <div class="socials">
+        <a href="#" class="social-links">
+          <img src="#" alt="facebook">
+        </a>
+        <a href="#" class="social-links">
+          <img src="#" alt="instagram">
+        </a>
+      </div>
+
+      <div class="credit">
+        <span>Designed and Hand Coded by</span>
+        <a href="/" target="_blank" rel="noopener">Bespoke Web Design Edmonton</a>
+        <span class="copyright"> © 2024 Mist’r Service. All rights reserved. </span>
+      </div>
     </div>
+
+
+
+    <div class="center-section">
+      <h2>Missouri’s Coolest Misting Solutions for Home & Business</h2>
+    </div>
+
+
+
     <div class="right-section">
       <div class="lists">
         <ul>
           <li>
-            <h2>Information</h2>
+            <h2>Quick Links</h2>
           </li>
           {
             navData.map((entry) => (
@@ -39,15 +49,6 @@ const currentYear = getCurrentYear()
               </li>
             ))
           }
-        </ul>
-        <ul>
-          <li>
-            <h2>Services</h2>
-          </li>
-          <li>Service1</li>
-          <li>Service2</li>
-          <li>Service4</li>
-          <li>Service5</li>
         </ul>
         <ul>
           <li>
@@ -74,12 +75,6 @@ const currentYear = getCurrentYear()
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="credit">
-    <span>Designed and Hand Coded by</span>
-    <a href="/" target="_blank" rel="noopener">Bespoke Web Design Edmonton</a>
-    <span class="copyright"> Copyright {currentYear} - Present</span>
   </div>
 </footer>
 
