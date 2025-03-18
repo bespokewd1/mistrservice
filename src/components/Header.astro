@@ -426,11 +426,6 @@ li.cs-li-link{
       .cs-li-link {
         color: var(--bodyTextColorWhite) !important;
       }
-      body.scroll{
-        li.cs-li-link{
-          color: var(--bodyTextColorWhite) !important;
-        }
-      }
     }
   }
 }
@@ -837,7 +832,7 @@ background-color: #fff
 
       .cs-logo {
         /* makes it turn white */
-        filter: grayscale(1) brightness(1000%);
+        //filter: grayscale(1) brightness(1000%);
       }
 
       .cs-li-link {
@@ -847,6 +842,11 @@ background-color: #fff
       .cs-li-link {
         &:before {
           background-color: var(--primaryLight);
+        }
+      }
+      body.scroll{
+        li.cs-li-link{
+          color: var(--bodyTextColorWhite) !important;
         }
       }
     }
