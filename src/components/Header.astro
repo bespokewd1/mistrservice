@@ -827,6 +827,11 @@ background-color: #fff
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
   body.dark-mode {
+    // body.scroll{
+    //     li.cs-li-link{
+    //       color: var(--bodyTextColorWhite) !important;
+    //     }
+    //   }
     #cs-navigation {
       background-color: var(--dark);
 
@@ -836,17 +841,12 @@ background-color: #fff
       }
 
       .cs-li-link {
-        color: var(--bodyTextColorWhite);
+        color: var(--bodyTextColorWhite) !important;
       }
 
       .cs-li-link {
         &:before {
           background-color: var(--primaryLight);
-        }
-      }
-      body.scroll{
-        li.cs-li-link{
-          color: var(--bodyTextColorWhite) !important;
         }
       }
     }
