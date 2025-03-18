@@ -2,8 +2,6 @@
 import client from "@data/client.json";
 import navData from "@data/navData.json";
 import { getCurrentYear } from "@js/utils"
-import facebook from "../assets/images/facebook.svg";
-import instagram from "../assets/images/instagram.svg";
 
 const currentYear = getCurrentYear()
 ---
@@ -17,10 +15,10 @@ const currentYear = getCurrentYear()
     <div class="left-section">
       <div class="socials">
         <a href="#" class="social-links">
-          <img src="../assets/images/facebook.svg" alt="fb">
+          <img src="/../assets/images/facebook.svg" alt="fb">
         </a>
         <a href="#" class="social-links">
-          <img src="../assets/images/instagram.svg" alt="ig">
+          <img src="/../assets/images/instagram.svg" alt="ig">
         </a>
       </div>
     </div>
@@ -239,7 +237,6 @@ const currentYear = getCurrentYear()
       }
 
       .copyright {
-        text-align: left;
         font-size: (16/16rem);
         display: block;
         margin-top: 2rem;
@@ -286,6 +283,7 @@ const currentYear = getCurrentYear()
       margin: 0;
       .lists {
         width: 96%;
+        flex-direction: row;
         max-width: (769/16rem);
         max-width: initial;
         margin: 0;
@@ -333,6 +331,7 @@ const currentYear = getCurrentYear()
 
     .credit {
       .copyright {
+        text-align: left;
         display: inline-block;
       }
     }
