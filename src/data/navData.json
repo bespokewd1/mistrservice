@@ -6,17 +6,17 @@
   },
   {
     "key": "Benefits of Misting",
-    "url": "/#benefits-of-misting/",
+    "url": "#benefits",
     "children": []
   },
   {
     "key": "Our Services",
-    "url": "/#services/",
+    "url": "#services",
     "children": [ ]
   },
   {
     "key": "About Us",
-    "url": "/#about/",
+    "url": "#about",
     "children": []
   }
 ]
