@@ -5,6 +5,7 @@ import CTA from "@components/CTA.astro";
 import FAQ from "@components/FAQ.astro";
 import { ImageSlider } from '@components/React/Slider';
 import { Picture } from 'astro:assets';
+import client from "@data/client.json";
 
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
@@ -38,7 +39,7 @@ const heroImages = [ slideImg2, slideImg1];
                 Cool down your patio by up to 20°F without getting wet. Safe and natural insect deterrent. 
                 Enjoy outdoor spaces all Spring and Summer long!
             </h2>
-            <a href="/contact" class="cs-button-solid">Get a Free Quote</a>
+            <a href="/#cs-contact" class="cs-button-solid">Get a Free Quote</a>
         </div>
     </div>
     <ImageSlider imgDatas={heroImages} isAutoSlide client:visible />
@@ -548,6 +549,119 @@ const heroImages = [ slideImg2, slideImg1];
   <FAQ />
   
   <!-- ============================================ -->
+  <!--                    CTA                       -->
+  <!-- ============================================ -->
+  <CTA />
+
+  <!-- ============================================ -->
+  <!--                Contact Form                  -->
+  <!-- ============================================ -->
+
+  <section id="cs-contact">
+    <div class="cs-container">
+      <form id="cs-form" name="Contact Form" method="post">
+        <div class="cs-content">
+          <span class="cs-topper">Contact</span>
+          <h2 class="cs-title">Get in Touch</h2>
+          <p class="cs-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
+            elementum ullamcorper ipsum porttitor aliquam. Id magna urna
+            ultrices odio pulvinar. Sed ut.
+          </p>
+        </div>
+        <label>
+          Name
+          <input
+            required
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+          />
+        </label>
+        <label>
+          Email
+          <input
+            required
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+        <label>
+          Phone
+          <input
+            required
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone"
+          />
+        </label>
+        <label>
+          How Did You Find Us
+          <input
+            type="text"
+            id="find"
+            name="find-us"
+            placeholder="How did you find us?"
+          />
+        </label>
+        <label class="cs-label-message">
+          Message
+          <textarea
+            required
+            name="Message"
+            id="message"
+            placeholder="Write message..."></textarea>
+        </label>
+        <button class="cs-button-solid" type="submit">Submit Message</button>
+      </form>
+      <div class="cs-right-section">
+        <!--Email-->
+        <span class="cs-header">Email</span>
+        <a class="cs-link" href={`mailto:${client.email}`}>{client.email}</a>
+        <!--Phone-->
+        <span class="cs-header">Phone</span>
+        <a class="cs-link" href={`tel:${client.phoneForTel}`}
+          >{client.phoneFormatted}</a
+        >
+        <!--Address-->
+        <span class="cs-header">Address</span>
+        <a class="cs-link" href={client.address.mapLink}>
+          {client.address.lineOne},
+          <br />
+          {client.address.lineTwo},
+          <br />
+          <span class="cs-block">
+            {client.address.city}
+            {client.address.state}
+            {client.address.zip}
+          </span>
+        </a>
+
+        <!-- Background Image-->
+        <picture class="cs-bg-picture">
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/skyscraper.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/skyscraper.jpg"
+            alt="building"
+            loading="lazy"
+            width="2500"
+            height="1667"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
   <!--            Extra Content To Rank             -->
   <!-- ============================================ -->
 
@@ -696,7 +810,7 @@ const heroImages = [ slideImg2, slideImg1];
   </section>
   
 
-  <CTA />
+
 </BaseLayout>
 
 <style lang="less">
@@ -1931,6 +2045,7 @@ grid-area: 1/1;
       .cs-item {
         /* reset margin so it won't interfere with flexbox */
         margin: 0;
+        height: (368/16rem);
       }
     }
   }
