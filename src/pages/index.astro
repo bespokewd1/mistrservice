@@ -195,11 +195,14 @@ const heroImages = [ slideImg2, slideImg1];
     <!-- ============================================ -->
   <!--                 Banner                 -->
   <!-- ============================================ -->
-  <section class="banner">
+  <section id="banner">
     <div class="cs-container">
       <div class="cs-content">
-        <h3 class="cs-h3">
-          Not a DIYer or unsure how to install a misting system? Professional installation services available in the greater STL area!
+        <h2 class="cs-title">
+          Not a DIYer or unsure how to install a misting system?
+        </h2>
+        <h3 class="cs-h3 subtitle">
+          Professional installation services available in the greater STL area!
         </h3>
       </div>
     </div>
@@ -2833,7 +2836,17 @@ grid-area: 1/1;
   //banner
   @media only screen and (min-width:0rem){
     #banner{
-      padding: var(--sectionPadding);
+      padding: 2rem;
+      background: var(--primary);
+      .cs-title{
+        color: #fff;
+        text-align: center;
+      }
+      .cs-subtitle{
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+      }
     }
   }
   
