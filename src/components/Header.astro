@@ -131,8 +131,9 @@ throw new Error("Function not implemented.");
 /*-- -------------------------- -->
 <---           Banner           -->
 <--- -------------------------- -*/
-@media only screen and (min-width:0rem){
+@media only screen and (min-width:63.9375rem){
   #cs-navigation{
+    padding: 0;
     .banner{
       background: #1c1c1c;
       display: flex;
@@ -179,6 +180,9 @@ li.cs-li-link{
   }
 
   #cs-navigation {
+    .banner{
+      display: none;
+    }
     /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
     font-family: "Roboto", "Arial", sans-serif;
     width: 100%;
@@ -441,15 +445,7 @@ li.cs-li-link{
     }
   }
 }
-// desktop
-@media only screen and (min-width:63.9375rem){
-  #cs-navigation{
-    padding: 0;
-    .banner{
-      display: none;
-    }
-  }
-}
+
 
   
 /* Dark Mode */
