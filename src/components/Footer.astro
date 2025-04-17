@@ -70,6 +70,16 @@ const currentYear = getCurrentYear()
     <a href="/" target="_blank" rel="noopener">Bespoke Web Design Edmonton</a>
     <span class="copyright"> © 2024 Mist’r Service. All rights reserved. </span>
   </div>
+
+  <!-- Sticky CTA for Mobile -->
+  <div id="sticky-cta">
+    <div class="cta-container">
+      <a href="tel:9496325879" class="cs-button-solid">
+        Call for FREE Quote
+        <img src="/assets/images/phone-call.png" alt="phone" height="48px" width="48px">
+      </a>
+    </div>
+  </div>
 </footer>
 
 <style lang="less">
@@ -343,6 +353,24 @@ const currentYear = getCurrentYear()
     #footer {
       background: #061623;
     }
+  }
+}
+@media only screen and (min-width:0rem){
+  #sticky-cta{
+    .cta-container{
+      .cs-button-solid{
+
+        img{
+          height: 48px;
+          width: 48px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width:64rem){
+  #sticky-cta{
+    display:none;
   }
 }
 
