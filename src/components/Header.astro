@@ -9,14 +9,18 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
 <header id="cs-navigation">
   <div class="banner">
     <div class="contact-container left">
-      <p class="cs-text">949-632-5879</p>
+      <p class="cs-text">+1 949-632-5879</p>
     </div>
     <div class="center">
       <p class="cs-text">#1 OUTDOOR COOLING SYSTEM. <a href="#" class="cs-text" style="text-decoration: underline;">LEARN MORE</a></p>
     </div>
     <div class="socials-container right">
-      <img src="https://i.ibb.co/CKCjPVXL/facebook.png" alt="FB">
-      <img src="https://i.ibb.co/Hw9zvWg/instagram.png" alt="IG">
+      <a href="" class="social" target="_blank">
+        <img src="https://i.ibb.co/CKCjPVXL/facebook.png" alt="FB">
+      </a>
+      <a href="" class="social" target="_blank">
+        <img src="https://i.ibb.co/Hw9zvWg/instagram.png" alt="IG">
+      </a>
     </div>
   </div>
   <div class="cs-container">
@@ -781,7 +785,9 @@ background-color: #fff
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
     transition-duration: 300ms;
     
-
+    .dark-mode-toggle{
+      margin-top: 5rem;
+    }
     .cs-container {
       width: 100%;
       max-width: (1280/16rem);
