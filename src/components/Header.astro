@@ -4,8 +4,10 @@ import { Icon } from 'astro-icon/components';
 import DarkModeToggle from "@components/DarkModeToggle.astro";
 
 ---
-<section id="header-banner">
-  <div class="cs-container">
+
+<!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
+<header id="cs-navigation">
+  <div class="banner">
     <div class="contact-container left">
       <p class="cs-text">949-632-5879</p>
     </div>
@@ -17,9 +19,6 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
       <img src="https://i.ibb.co/Hw9zvWg/instagram.png" alt="IG">
     </div>
   </div>
-</section>
-<!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
-<header id="cs-navigation">
   <div class="cs-container">
     <!--Nav Logo-->
     <a href="#hero" class="cs-logo" aria-label="back to home">
@@ -133,8 +132,8 @@ throw new Error("Function not implemented.");
 <---           Banner           -->
 <--- -------------------------- -*/
 @media only screen and (min-width:0rem){
-  #header-banner{
-    .cs-container{
+  #cs-navigation{
+    .banner{
       display: flex;
       justify-content: space-between;
       padding: 0 2rem;
