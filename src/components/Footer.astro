@@ -76,7 +76,7 @@ const currentYear = getCurrentYear()
     <div class="cta-container">
       <a href="tel:9496325879" class="cs-button-solid">
         Call for FREE Quote
-        <img src="/assets/images/phone-call.png" alt="phone" height="48px" width="48px">
+        <img src="/assets/images/phone-call.png" alt="phone">
       </a>
     </div>
   </div>
@@ -235,6 +235,7 @@ const currentYear = getCurrentYear()
       line-height: (36/16rem);
       width: 96%;
       color: #fff;
+      margin-bottom: 5rem;
 
       a {
         font-size: (16/16rem);
@@ -340,6 +341,7 @@ const currentYear = getCurrentYear()
     }
 
     .credit {
+      margin-bottom: 0;
       .copyright {
         display: inline-block;
       }
@@ -357,12 +359,28 @@ const currentYear = getCurrentYear()
 }
 @media only screen and (min-width:0rem){
   #sticky-cta{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
     .cta-container{
       .cs-button-solid{
-
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        min-width: 300px;
+        margin: auto;
+        padding: .5rem 1rem;
+        margin-bottom: 2rem;
+        color: #fff;
+        background: #000;
         img{
-          height: 48px;
-          width: 48px;
+          height: 40px;
+          width: 40px;
+        }
+        &:before{
+          background: var(--primary);
         }
       }
     }
