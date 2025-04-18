@@ -11,13 +11,14 @@ import client from "@data/client.json";
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
 import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
-import slideImg1 from '@assets/images/landing.jpg';
-import slideImg2 from '@assets/images/hero.jpg';
+import slideImg1 from '@assets/images/1.png';
+import slideImg2 from '@assets/images/2png.jpg';
+import slideImg3 from '@assets/images/5.png';
 //import slideImg3 from '@assets/images/Mistr Service Flyer.png';
 import Compatibility from "@components/compatibility.astro";
 const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 
-const heroImages = [ slideImg2, slideImg1];
+const heroImages = [ slideImg3, slideImg2, slideImg1];
 
 ---
 
